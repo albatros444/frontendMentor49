@@ -1,0 +1,47 @@
+.FAQ {
+  h2 {
+    margin-bottom: 25px;
+  }
+  .paragraph {
+    width: 500px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  .accordeon {
+    width: 545px;
+    margin: 0 auto;
+    border-bottom: 1px solid hsl(229, 8%, 90%);
+    &__button {
+      display: block;
+      width: 100%;
+      height: 64px;
+      padding: 0;
+      border: none;
+      border-top: 1px solid hsl(229, 8%, 90%);
+      text-align: left;
+      outline: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 400;
+      background: none;
+    }
+
+    &__panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-in-out;
+      p {
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: hsl(229, 8%, 60%);
+        line-height: 2.2;
+      }
+    }
+    .panelActive {
+      max-height: 300px;
+    }
+  }
+}

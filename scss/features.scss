@@ -1,0 +1,136 @@
+.features {
+  position: relative;
+  h2 {
+    margin-bottom: 25px;
+  }
+  &__text {
+    width: 500px;
+    margin: 0 auto 70px;
+    text-align: center;
+  }
+  &__tabs {
+    width: 730px;
+    margin: 0 auto 70px;
+    border-bottom: 1px solid hsl(229, 8%, 90%);
+    .tabsBox {
+      position: relative;
+      display: flex;
+      li {
+        display: block;
+        width: 33.333%;
+        height: 50px;
+        padding: 0;
+        border: none;
+        outline: inherit;
+        cursor: pointer;
+        font-family: inherit;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        color: hsl(229, 8%, 40%); //custom
+        background: none;
+        &:first-child.active ~ .redBar {
+          transform: translateX(-33.333%) scaleX(0.333);
+        }
+        &:nth-child(2).active ~ .redBar {
+          transform: translateX(0) scaleX(0.333);
+        }
+        &:nth-child(3).active ~ .redBar {
+          transform: translateX(33.333%) scaleX(0.333);
+        }
+      }
+      .redBar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        // float: left;
+        height: 4px;
+        background-color: hsl(0, 94%, 66%);
+        transform: translateX(-33.333%) scaleX(0.333);
+        transition: all 0.13s ease-in-out;
+      }
+    }
+  }
+  &__blueDiv {
+    position: absolute;
+    bottom: 0;
+    height: 350px;
+    width: 44.44vw; //640px;
+    z-index: -10;
+    // margin-left: -160px;
+    min-width: 175px;
+    border-radius: 0 175px 175px 0;
+    background-color: hsl(231, 69%, 60%);
+  }
+  &__slides {
+    overflow-x: hidden;
+    height: 440px;
+    .slidesLine {
+      display: flex;
+      transition: all 0.5s ease-in-out;
+      .slide {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 0 160px;
+
+        // padding-right: 320px; //160px left of one and 160px right of another in slideline. All slides in one line
+        height: 430px;
+        flex-shrink: 0;
+        &__left {
+          width: 535px;
+          margin-right: 90px;
+        }
+        &__right {
+          max-width: 540px;
+          flex-shrink: 0;
+          margin-top: 70px;
+          h3 {
+            margin-bottom: 25px;
+            font-size: 30px;
+            font-weight: 500;
+          }
+          p {
+            margin-bottom: 25px;
+          }
+          button {
+            display: inline-block;
+            width: 115px;
+            height: 47px;
+            padding: 0;
+            border: none;
+            outline: inherit;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-family: inherit;
+            text-align: center;
+            text-decoration: none;
+            background-color: hsl(231, 69%, 60%);
+            color: white;
+          }
+        }
+      }
+      .slide2 {
+        .slide__left {
+          padding-left: 70px;
+        }
+      }
+      .slide3 {
+        .slide__left {
+          padding-left: 70px;
+        }
+      }
+    }
+    .slidesLine.tab1 {
+      transform: translateX(0);
+    }
+    .slidesLine.tab2 {
+      transform: translateX(-100vw);
+    }
+    .slidesLine.tab3 {
+      transform: translateX(-200vw);
+    }
+  }
+}

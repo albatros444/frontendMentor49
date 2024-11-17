@@ -1,0 +1,432 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  /* height: 100%; - if attribution don't want to stick to bottom */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /* min-height: 100%; - if attribution don't want to stick to bottom  */
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+textarea,
+input {
+  outline: none;
+  border: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: auto;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 160px;
+}
+nav .navRight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 455px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.07em;
+}
+nav .navRight .loginBtn {
+  display: inline-block;
+  width: 110px;
+  height: 36px;
+  padding: 0;
+  padding-top: 11px;
+  border: none;
+  border-radius: 5px;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+}
+
+.hero {
+  display: flex;
+  padding: 70px 0 80px 160px;
+}
+.hero__left {
+  width: 34.72vw;
+  min-width: 440px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.hero__left h1 {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 47px;
+  font-weight: 500;
+  color: hsl(229, 31%, 21%);
+}
+.hero__left p {
+  margin-bottom: 30px;
+}
+.hero__left .buttonsBox button {
+  display: inline-block;
+  width: 165px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+}
+.hero__left .buttonsBox button:nth-child(1) {
+  margin-right: 10px;
+  background-color: hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 90%);
+}
+.hero__left .buttonsBox button:nth-child(2) {
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(229, 8%, 40%);
+  box-shadow: 0 5px 10px hsl(231, 8%, 85%);
+}
+.hero__right {
+  position: relative;
+  padding-top: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+.hero__right__blueDiv {
+  height: 350px;
+  width: auto;
+  margin-left: 260px;
+  min-width: 175px;
+  border-radius: 175px 0 0 175px;
+  background-color: hsl(231, 69%, 60%);
+}
+.hero__right img {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+}
+
+.features {
+  position: relative;
+}
+.features h2 {
+  margin-bottom: 25px;
+}
+.features__text {
+  width: 500px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+.features__tabs {
+  width: 730px;
+  margin: 0 auto 70px;
+  border-bottom: 1px solid hsl(229, 8%, 90%);
+}
+.features__tabs .tabsBox {
+  position: relative;
+  display: flex;
+}
+.features__tabs .tabsBox li {
+  display: block;
+  width: 33.333%;
+  height: 50px;
+  padding: 0;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: hsl(229, 8%, 40%);
+  background: none;
+}
+.features__tabs .tabsBox li:first-child.active ~ .redBar {
+  transform: translateX(-33.333%) scaleX(0.333);
+}
+.features__tabs .tabsBox li:nth-child(2).active ~ .redBar {
+  transform: translateX(0) scaleX(0.333);
+}
+.features__tabs .tabsBox li:nth-child(3).active ~ .redBar {
+  transform: translateX(33.333%) scaleX(0.333);
+}
+.features__tabs .tabsBox .redBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: hsl(0, 94%, 66%);
+  transform: translateX(-33.333%) scaleX(0.333);
+  transition: all 0.13s ease-in-out;
+}
+.features__blueDiv {
+  position: absolute;
+  bottom: 0;
+  height: 350px;
+  width: 44.44vw;
+  z-index: -10;
+  min-width: 175px;
+  border-radius: 0 175px 175px 0;
+  background-color: hsl(231, 69%, 60%);
+}
+.features__slides {
+  overflow-x: hidden;
+  height: 440px;
+}
+.features__slides .slidesLine {
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+.features__slides .slidesLine .slide {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 0 160px;
+  height: 430px;
+  flex-shrink: 0;
+}
+.features__slides .slidesLine .slide__left {
+  width: 535px;
+  margin-right: 90px;
+}
+.features__slides .slidesLine .slide__right {
+  max-width: 540px;
+  flex-shrink: 0;
+  margin-top: 70px;
+}
+.features__slides .slidesLine .slide__right h3 {
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.features__slides .slidesLine .slide__right p {
+  margin-bottom: 25px;
+}
+.features__slides .slidesLine .slide__right button {
+  display: inline-block;
+  width: 115px;
+  height: 47px;
+  padding: 0;
+  border: none;
+  outline: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+}
+.features__slides .slidesLine .slide2 .slide__left {
+  padding-left: 70px;
+}
+.features__slides .slidesLine .slide3 .slide__left {
+  padding-left: 70px;
+}
+.features__slides .slidesLine.tab1 {
+  transform: translateX(0);
+}
+.features__slides .slidesLine.tab2 {
+  transform: translateX(-100vw);
+}
+.features__slides .slidesLine.tab3 {
+  transform: translateX(-200vw);
+}
+
+.downloadExtension {
+  margin-top: 180px;
+  text-align: center;
+}
+.downloadExtension h2 {
+  margin-bottom: 25px;
+}
+.downloadExtension .paragraph {
+  margin: 0 auto;
+  width: 540px;
+  margin-bottom: 55px;
+}
+.downloadExtension .browsersBox {
+  display: flex;
+  justify-content: space-between;
+  width: 915px;
+  margin: 0 auto 140px;
+}
+.downloadExtension .browsersBox__card {
+  height: 365px;
+  width: 280px;
+  padding-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px hsl(231, 39%, 90%);
+}
+.downloadExtension .browsersBox__card img {
+  margin-bottom: 30px;
+}
+.downloadExtension .browsersBox__card h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.downloadExtension .browsersBox__card .version {
+  font-size: 15px;
+  color: hsl(229, 8%, 60%);
+  margin-bottom: 30px;
+}
+.downloadExtension .browsersBox__card .dottedLine {
+  display: flex;
+  height: 30px;
+  margin-left: 1px;
+}
+.downloadExtension .browsersBox__card .dottedLine span {
+  display: block;
+  flex-shrink: 0;
+  height: 4px;
+  width: 4px;
+  border-radius: 4px;
+  margin-right: 12px;
+  background-color: hsl(229, 8%, 90%);
+}
+.downloadExtension .browsersBox__card .buttonBox {
+  padding: 0 20px;
+}
+.downloadExtension .browsersBox__card .buttonBox button {
+  display: inline-block;
+  width: 100%;
+  height: 47px;
+  padding: 0;
+  border: none;
+  outline: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+}
+.downloadExtension .browsersBox__card:nth-child(2) {
+  margin-top: 40px;
+}
+.downloadExtension .browsersBox__card:nth-child(3) {
+  margin-top: 80px;
+}
+
+.FAQ h2 {
+  margin-bottom: 25px;
+}
+.FAQ .paragraph {
+  width: 500px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+.FAQ .accordeon {
+  width: 545px;
+  margin: 0 auto;
+  border-bottom: 1px solid hsl(229, 8%, 90%);
+}
+.FAQ .accordeon__button {
+  display: block;
+  width: 100%;
+  height: 64px;
+  padding: 0;
+  border: none;
+  border-top: 1px solid hsl(229, 8%, 90%);
+  text-align: left;
+  outline: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 400;
+  background: none;
+}
+.FAQ .accordeon__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.FAQ .accordeon__panel p {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: hsl(229, 8%, 60%);
+  line-height: 2.2;
+}
+.FAQ .accordeon .panelActive {
+  max-height: 300px;
+}
+
+body h1,
+body h2,
+body h3 {
+  color: hsl(229, 31%, 21%);
+}
+body h2 {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+body .paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  color: hsl(229, 8%, 60%);
+}
+
+/*# sourceMappingURL=main.css.map */
