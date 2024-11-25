@@ -15,6 +15,9 @@
     .tabsBox {
       position: relative;
       display: flex;
+      .active {
+        color: hsl(229, 31%, 21%);
+      }
       li {
         display: block;
         width: 33.333%;
@@ -29,6 +32,7 @@
         font-size: 16px;
         color: hsl(229, 8%, 40%); //custom
         background: none;
+        transition: all 0.13s ease-in-out;
         &:first-child.active ~ .redBar {
           transform: translateX(-33.333%) scaleX(0.333);
         }
@@ -37,6 +41,9 @@
         }
         &:nth-child(3).active ~ .redBar {
           transform: translateX(33.333%) scaleX(0.333);
+        }
+        &:hover {
+          color: hsl(0, 94%, 66%);
         }
       }
       .redBar {
@@ -95,11 +102,12 @@
             margin-bottom: 25px;
           }
           button {
+            //blueButton
             display: inline-block;
             width: 115px;
             height: 47px;
             padding: 0;
-            border: none;
+            // border: none;
             outline: inherit;
             border-radius: 6px;
             cursor: pointer;
@@ -107,8 +115,6 @@
             font-family: inherit;
             text-align: center;
             text-decoration: none;
-            background-color: hsl(231, 69%, 60%);
-            color: white;
           }
         }
       }

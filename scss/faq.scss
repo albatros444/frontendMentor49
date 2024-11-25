@@ -1,4 +1,5 @@
 .FAQ {
+  margin-bottom: 90px;
   h2 {
     margin-bottom: 25px;
   }
@@ -9,10 +10,12 @@
   }
   .accordeon {
     width: 545px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     border-bottom: 1px solid hsl(229, 8%, 90%);
     &__button {
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
       height: 64px;
       padding: 0;
@@ -23,9 +26,26 @@
       cursor: pointer;
       font-family: inherit;
       text-decoration: none;
-      font-size: 17px;
+      font-size: 19px;
       font-weight: 400;
       background: none;
+      transition: all 0.13s ease-in-out;
+      &:hover {
+        color: hsl(0, 94%, 66%);
+      }
+      svg {
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    .btnActive {
+      svg {
+        path {
+          stroke: hsl(0, 94%, 66%);
+        }
+        margin-bottom: 1px; //to eliminate jerk of arrow on rotation
+        transition: all 0.2s ease-in-out;
+        transform: rotate(180deg);
+      }
     }
 
     &__panel {
@@ -43,5 +63,19 @@
     .panelActive {
       max-height: 300px;
     }
+  }
+  .moreInfoBtn {
+    display: block;
+    width: 110px;
+    height: 47px;
+    padding: 0;
+    margin: 0 auto;
+    outline: inherit;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: inherit;
+    text-align: center;
+    text-decoration: none;
   }
 }

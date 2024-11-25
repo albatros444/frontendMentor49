@@ -74,12 +74,18 @@ nav .navRight {
   font-size: 13px;
   letter-spacing: 0.07em;
 }
+nav .navRight .navLink {
+  transition: color 0.13s ease-in-out;
+}
+nav .navRight .navLink:hover {
+  color: hsl(0, 94%, 66%);
+}
 nav .navRight .loginBtn {
   display: inline-block;
   width: 110px;
   height: 36px;
   padding: 0;
-  padding-top: 11px;
+  padding-top: 9px;
   border: none;
   border-radius: 5px;
   outline: inherit;
@@ -91,8 +97,15 @@ nav .navRight .loginBtn {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  box-shadow: 0 4px 6px hsl(0, 54%, 86%);
+  border: 2px solid hsl(0, 94%, 66%);
   background-color: hsl(0, 94%, 66%);
   color: white;
+  transition: all 0.13s ease-in-out;
+}
+nav .navRight .loginBtn:hover {
+  background-color: white;
+  color: hsl(0, 94%, 66%);
 }
 
 .hero {
@@ -120,7 +133,6 @@ nav .navRight .loginBtn {
   width: 165px;
   height: 50px;
   padding: 0;
-  border: none;
   border-radius: 4px;
   outline: inherit;
   cursor: pointer;
@@ -129,17 +141,20 @@ nav .navRight .loginBtn {
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
-  background: none;
+  transition: all 0.13s ease-in-out;
 }
 .hero__left .buttonsBox button:nth-child(1) {
   margin-right: 10px;
-  background-color: hsl(231, 69%, 60%);
-  color: hsl(0, 0%, 90%);
 }
 .hero__left .buttonsBox button:nth-child(2) {
   background-color: hsl(0, 0%, 95%);
   color: hsl(229, 8%, 40%);
   box-shadow: 0 5px 10px hsl(231, 8%, 85%);
+  border: 2px solid hsl(0, 0%, 95%);
+}
+.hero__left .buttonsBox button:nth-child(2):hover {
+  background-color: white;
+  border: 2px solid hsl(229, 8%, 60%);
 }
 .hero__right {
   position: relative;
@@ -181,6 +196,9 @@ nav .navRight .loginBtn {
   position: relative;
   display: flex;
 }
+.features__tabs .tabsBox .active {
+  color: hsl(229, 31%, 21%);
+}
 .features__tabs .tabsBox li {
   display: block;
   width: 33.333%;
@@ -195,6 +213,7 @@ nav .navRight .loginBtn {
   font-size: 16px;
   color: hsl(229, 8%, 40%);
   background: none;
+  transition: all 0.13s ease-in-out;
 }
 .features__tabs .tabsBox li:first-child.active ~ .redBar {
   transform: translateX(-33.333%) scaleX(0.333);
@@ -204,6 +223,9 @@ nav .navRight .loginBtn {
 }
 .features__tabs .tabsBox li:nth-child(3).active ~ .redBar {
   transform: translateX(33.333%) scaleX(0.333);
+}
+.features__tabs .tabsBox li:hover {
+  color: hsl(0, 94%, 66%);
 }
 .features__tabs .tabsBox .redBar {
   position: absolute;
@@ -263,7 +285,6 @@ nav .navRight .loginBtn {
   width: 115px;
   height: 47px;
   padding: 0;
-  border: none;
   outline: inherit;
   border-radius: 6px;
   cursor: pointer;
@@ -271,8 +292,6 @@ nav .navRight .loginBtn {
   font-family: inherit;
   text-align: center;
   text-decoration: none;
-  background-color: hsl(231, 69%, 60%);
-  color: white;
 }
 .features__slides .slidesLine .slide2 .slide__left {
   padding-left: 70px;
@@ -350,7 +369,6 @@ nav .navRight .loginBtn {
   width: 100%;
   height: 47px;
   padding: 0;
-  border: none;
   outline: inherit;
   border-radius: 6px;
   cursor: pointer;
@@ -358,8 +376,6 @@ nav .navRight .loginBtn {
   font-family: inherit;
   text-align: center;
   text-decoration: none;
-  background-color: hsl(231, 69%, 60%);
-  color: white;
 }
 .downloadExtension .browsersBox__card:nth-child(2) {
   margin-top: 40px;
@@ -368,6 +384,9 @@ nav .navRight .loginBtn {
   margin-top: 80px;
 }
 
+.FAQ {
+  margin-bottom: 90px;
+}
 .FAQ h2 {
   margin-bottom: 25px;
 }
@@ -378,11 +397,13 @@ nav .navRight .loginBtn {
 }
 .FAQ .accordeon {
   width: 545px;
-  margin: 0 auto;
+  margin: 0 auto 50px;
   border-bottom: 1px solid hsl(229, 8%, 90%);
 }
 .FAQ .accordeon__button {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 64px;
   padding: 0;
@@ -393,9 +414,24 @@ nav .navRight .loginBtn {
   cursor: pointer;
   font-family: inherit;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 400;
   background: none;
+  transition: all 0.13s ease-in-out;
+}
+.FAQ .accordeon__button:hover {
+  color: hsl(0, 94%, 66%);
+}
+.FAQ .accordeon__button svg {
+  transition: all 0.2s ease-in-out;
+}
+.FAQ .accordeon .btnActive svg {
+  margin-bottom: 1px;
+  transition: all 0.2s ease-in-out;
+  transform: rotate(180deg);
+}
+.FAQ .accordeon .btnActive svg path {
+  stroke: hsl(0, 94%, 66%);
 }
 .FAQ .accordeon__panel {
   max-height: 0;
@@ -412,6 +448,153 @@ nav .navRight .loginBtn {
 .FAQ .accordeon .panelActive {
   max-height: 300px;
 }
+.FAQ .moreInfoBtn {
+  display: block;
+  width: 110px;
+  height: 47px;
+  padding: 0;
+  margin: 0 auto;
+  outline: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+}
+
+.stayUpToDate {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+}
+.stayUpToDate .text {
+  margin-bottom: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+.stayUpToDate h2 {
+  width: 410px;
+  margin: 0 auto 30px;
+  color: white;
+}
+.stayUpToDate form {
+  display: flex;
+  justify-content: space-between;
+  width: 445px;
+  margin: 0 auto;
+}
+.stayUpToDate form .inputContainer {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: hsl(0, 94%, 66%);
+}
+.stayUpToDate form .inputContainer input {
+  height: 46px;
+  width: 100%;
+  padding-left: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  border: 2px solid white;
+}
+.stayUpToDate form .inputContainer input::placeholder {
+  color: hsl(229, 8%, 80%);
+}
+.stayUpToDate form .inputContainer::after {
+  display: none;
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  content: url(../images/icon-error.svg);
+}
+.stayUpToDate form .inputContainer p {
+  display: none;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: italic;
+}
+.stayUpToDate form button {
+  display: block;
+  width: 125px;
+  height: 46px;
+  padding: 0;
+  margin: 0 auto;
+  outline: inherit;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid hsl(0, 94%, 66%);
+  background-color: hsl(0, 94%, 66%);
+  color: white;
+  transition: all 0.13s ease-in-out;
+}
+.stayUpToDate form button:hover {
+  background-color: white;
+  color: hsl(0, 94%, 66%);
+}
+.stayUpToDate .formInvalid .inputContainer {
+  height: 70px;
+}
+.stayUpToDate .formInvalid .inputContainer input {
+  border: 2px solid hsl(0, 94%, 66%);
+}
+.stayUpToDate .formInvalid .inputContainer::after {
+  display: block;
+}
+.stayUpToDate .formInvalid .inputContainer p {
+  display: block;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 85px;
+  padding: 0 160px;
+  background-color: hsl(229, 31%, 21%);
+  color: white;
+}
+footer .footerLeft {
+  display: flex;
+  align-items: center;
+}
+footer .footerLeft svg {
+  margin-right: 65px;
+}
+footer .footerLeft a {
+  margin-right: 50px;
+  font-size: 13px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.13s ease-in-out;
+}
+footer .footerLeft a:hover {
+  color: hsl(0, 94%, 66%);
+}
+footer .footerRight {
+  display: flex;
+  align-items: center;
+}
+footer .footerRight a {
+  padding-top: 10px;
+  margin-left: 40px;
+}
+footer .footerRight a:hover svg path {
+  fill: hsl(0, 94%, 66%);
+  transition: all 0.13s ease-in-out;
+}
 
 body h1,
 body h2,
@@ -427,6 +610,17 @@ body .paragraph {
   font-size: 18px;
   line-height: 1.6;
   color: hsl(229, 8%, 60%);
+}
+body .blueButton {
+  background-color: hsl(231, 69%, 60%);
+  border: 2px solid hsl(231, 69%, 60%);
+  color: hsl(0, 0%, 90%);
+  box-shadow: 0 5px 10px hsl(231, 69%, 90%);
+  transition: all 0.13s ease-in-out;
+}
+body .blueButton:hover {
+  background-color: white;
+  color: hsl(231, 69%, 60%);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -27,14 +27,35 @@ tabs.forEach((tab) => {
 
 accordeonBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
+    btn.classList.add("btnActive");
     let panel = btn.nextElementSibling;
     if (panel.classList.contains("panelActive")) {
       panel.classList.remove("panelActive");
+      btn.classList.remove("btnActive");
     } else {
       accordionPanels.forEach((accPan) => {
         accPan.classList.remove("panelActive");
       });
+      accordeonBtns.forEach((accBtn) => {
+        accBtn.classList.remove("btnActive");
+      });
       panel.classList.add("panelActive");
+      btn.classList.add("btnActive");
     }
   });
+});
+
+//////email validation in browser///
+const form = document.querySelector("form");
+const emailField = document.querySelector("input");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  form.reset();
+  form.classList.remove("formInvalid");
+});
+emailField.addEventListener("invalid", (e) => {
+  e.preventDefault();
+  console.log("invalid email");
+  form.classList.add("formInvalid");
 });

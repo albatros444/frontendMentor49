@@ -5,6 +5,8 @@
 @import "features";
 @import "downloadExtension";
 @import "faq";
+@import "stayUpToDate";
+@import "footer";
 
 body {
   // padding: 0 160px;
@@ -22,5 +24,16 @@ body {
     font-size: 18px;
     line-height: 1.6;
     color: hsl(229, 8%, 60%);
+  }
+  .blueButton {
+    background-color: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+    color: hsl(0, 0%, 90%);
+    box-shadow: 0 5px 10px hsl(231, 69%, 90%);
+    transition: all 0.13s ease-in-out;
+    &:hover {
+      background-color: white;
+      color: hsl(231, 69%, 60%);
+    }
   }
 }

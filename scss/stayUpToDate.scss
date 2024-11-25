@@ -1,0 +1,95 @@
+.stayUpToDate {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  background-color: hsl(231, 69%, 60%);
+  color: white;
+  .text {
+    margin-bottom: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  h2 {
+    width: 410px;
+    margin: 0 auto 30px;
+    color: white;
+  }
+  form {
+    display: flex;
+    justify-content: space-between;
+    width: 445px;
+    margin: 0 auto;
+    .inputContainer {
+      position: relative;
+      display: inline-block;
+      width: 300px;
+      height: auto;
+      margin-right: 15px;
+      border-radius: 5px;
+      background-color: hsl(0, 94%, 66%);
+      input {
+        height: 46px;
+        width: 100%;
+        padding-left: 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        border: 2px solid white;
+        &::placeholder {
+          color: hsl(229, 8%, 80%);
+        }
+      }
+      &::after {
+        display: none;
+        position: absolute;
+        right: 13px;
+        top: 13px;
+        content: url(../images/icon-error.svg);
+      }
+      p {
+        display: none;
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 10px;
+        font-weight: 500;
+        font-style: italic;
+      }
+    }
+    button {
+      display: block;
+      width: 125px;
+      height: 46px;
+      padding: 0;
+      margin: 0 auto;
+      outline: inherit;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+      font-family: inherit;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid hsl(0, 94%, 66%);
+      background-color: hsl(0, 94%, 66%);
+      color: white;
+      transition: all 0.13s ease-in-out;
+      &:hover {
+        background-color: white;
+        color: hsl(0, 94%, 66%);
+      }
+    }
+  }
+  .formInvalid {
+    .inputContainer {
+      height: 70px;
+      input {
+        border: 2px solid hsl(0, 94%, 66%);
+      }
+      &::after {
+        display: block;
+      }
+      p {
+        display: block;
+      }
+    }
+  }
+}
