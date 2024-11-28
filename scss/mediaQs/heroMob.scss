@@ -1,0 +1,38 @@
+.hero {
+  flex-direction: column-reverse;
+  align-items: end;
+  //   height: 200px;
+  padding: 0 0 160px;
+  &__right {
+    // height: 400px;
+    padding-top: 0;
+    &__blueDiv {
+      margin-top: 100px;
+      height: 210px;
+    }
+    img {
+      left: 15px;
+      width: 92%;
+    }
+  }
+  &__left {
+    width: 100%;
+    min-width: auto;
+    padding: 0 32px;
+    text-align: center;
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 15px;
+    }
+    .buttonsBox {
+      display: flex;
+      width: 100%;
+      button {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

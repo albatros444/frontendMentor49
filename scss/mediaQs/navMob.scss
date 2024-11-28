@@ -1,0 +1,47 @@
+nav {
+  padding: 35px;
+  .navRight {
+    display: none;
+  }
+  .hamburgerMenu {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+    .line {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: hsl(229, 31%, 21%);
+      transition: all 0.2s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2) {
+        top: 6px;
+      }
+      &:nth-child(3) {
+        top: 12px;
+      }
+    }
+  }
+  .hamburgerActive {
+    .line {
+      &:nth-child(1) {
+        top: 50%;
+        transform: translateY(-50%) rotateZ(-135deg);
+      }
+      &:nth-child(2) {
+        right: 50%;
+        width: 0;
+      }
+      &:nth-child(3) {
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%) rotateZ(135deg);
+      }
+    }
+  }
+}

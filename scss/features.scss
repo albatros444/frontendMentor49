@@ -58,6 +58,9 @@
         transition: all 0.13s ease-in-out;
       }
     }
+    .tabsMobile {
+      display: none;
+    }
   }
   &__blueDiv {
     position: absolute;
@@ -81,8 +84,6 @@
         justify-content: space-between;
         width: 100vw;
         padding: 0 160px;
-
-        // padding-right: 320px; //160px left of one and 160px right of another in slideline. All slides in one line
         height: 430px;
         flex-shrink: 0;
         &__left {

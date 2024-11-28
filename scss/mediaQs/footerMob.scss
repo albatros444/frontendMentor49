@@ -1,0 +1,23 @@
+footer {
+  display: block;
+  height: auto;
+  padding: 40px 32px;
+  .footerLeft {
+    display: block;
+    svg {
+      display: block;
+      margin: 0 auto 35px;
+    }
+    a {
+      display: block;
+      margin: 0 auto 25px;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+  .footerRight {
+    a {
+      margin: 20px 20px 0; //40 between images
+    }
+  }
+}

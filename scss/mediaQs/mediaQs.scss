@@ -1,0 +1,17 @@
+@media screen and (max-width: 500px) {
+  body {
+    h2 {
+      font-size: 23px;
+    }
+    .paragraph {
+      font-size: 15px;
+    }
+  }
+  @import "heroMob";
+  @import "navMob";
+  @import "featuresMob";
+  @import "downloadExtMob.scss";
+  @import "faqMob.scss";
+  @import "stayUpToDateMob.scss";
+  @import "footerMob.scss";
+}

@@ -34,7 +34,7 @@
         transition: all 0.13s ease-in-out;
         &:nth-child(1) {
           //blueButton
-          margin-right: 10px;
+          margin-right: 15px;
         }
         &:nth-child(2) {
           background-color: hsl(0, 0%, 95%);
@@ -57,7 +57,7 @@
     &__blueDiv {
       height: 350px;
       width: auto;
-      margin-left: 260px;
+      margin-left: 100px;
       min-width: 175px;
       border-radius: 175px 0 0 175px;
       background-color: hsl(231, 69%, 60%);

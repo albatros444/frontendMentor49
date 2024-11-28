@@ -107,6 +107,9 @@ nav .navRight .loginBtn:hover {
   background-color: white;
   color: hsl(0, 94%, 66%);
 }
+nav .hamburgerMenu {
+  display: none;
+}
 
 .hero {
   display: flex;
@@ -144,7 +147,7 @@ nav .navRight .loginBtn:hover {
   transition: all 0.13s ease-in-out;
 }
 .hero__left .buttonsBox button:nth-child(1) {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .hero__left .buttonsBox button:nth-child(2) {
   background-color: hsl(0, 0%, 95%);
@@ -165,7 +168,7 @@ nav .navRight .loginBtn:hover {
 .hero__right__blueDiv {
   height: 350px;
   width: auto;
-  margin-left: 260px;
+  margin-left: 100px;
   min-width: 175px;
   border-radius: 175px 0 0 175px;
   background-color: hsl(231, 69%, 60%);
@@ -236,6 +239,9 @@ nav .navRight .loginBtn:hover {
   background-color: hsl(0, 94%, 66%);
   transform: translateX(-33.333%) scaleX(0.333);
   transition: all 0.13s ease-in-out;
+}
+.features__tabs .tabsMobile {
+  display: none;
 }
 .features__blueDiv {
   position: absolute;
@@ -423,6 +429,7 @@ nav .navRight .loginBtn:hover {
   color: hsl(0, 94%, 66%);
 }
 .FAQ .accordeon__button svg {
+  flex-shrink: 0;
   transition: all 0.2s ease-in-out;
 }
 .FAQ .accordeon .btnActive svg {
@@ -586,6 +593,7 @@ footer .footerLeft a:hover {
 footer .footerRight {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 footer .footerRight a {
   padding-top: 10px;
@@ -621,6 +629,243 @@ body .blueButton {
 body .blueButton:hover {
   background-color: white;
   color: hsl(231, 69%, 60%);
+}
+
+@media screen and (max-width: 500px) {
+  body h2 {
+    font-size: 23px;
+  }
+  body .paragraph {
+    font-size: 15px;
+  }
+  .hero {
+    flex-direction: column-reverse;
+    align-items: end;
+    padding: 0 0 160px;
+  }
+  .hero__right {
+    padding-top: 0;
+  }
+  .hero__right__blueDiv {
+    margin-top: 100px;
+    height: 210px;
+  }
+  .hero__right img {
+    left: 15px;
+    width: 92%;
+  }
+  .hero__left {
+    width: 100%;
+    min-width: auto;
+    padding: 0 32px;
+    text-align: center;
+  }
+  .hero__left h1 {
+    font-size: 30px;
+  }
+  .hero__left p {
+    font-size: 15px;
+  }
+  .hero__left .buttonsBox {
+    display: flex;
+    width: 100%;
+  }
+  .hero__left .buttonsBox button {
+    display: block;
+    width: 100%;
+  }
+  nav {
+    padding: 35px;
+  }
+  nav .navRight {
+    display: none;
+  }
+  nav .hamburgerMenu {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 17px;
+    cursor: pointer;
+  }
+  nav .hamburgerMenu .line {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: hsl(229, 31%, 21%);
+    transition: all 0.2s ease-in-out;
+  }
+  nav .hamburgerMenu .line:nth-child(1) {
+    top: 0px;
+  }
+  nav .hamburgerMenu .line:nth-child(2) {
+    top: 6px;
+  }
+  nav .hamburgerMenu .line:nth-child(3) {
+    top: 12px;
+  }
+  nav .hamburgerActive .line:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotateZ(-135deg);
+  }
+  nav .hamburgerActive .line:nth-child(2) {
+    right: 50%;
+    width: 0;
+  }
+  nav .hamburgerActive .line:nth-child(3) {
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%) rotateZ(135deg);
+  }
+  .features__text {
+    width: 100%;
+    margin: 0 auto 35px;
+    padding: 0 32px;
+  }
+  .features__tabs {
+    width: 100%;
+    border-bottom: none;
+    padding: 0 32px;
+  }
+  .features__tabs .tabsBox {
+    display: none;
+  }
+  .features__tabs .tabsMobile {
+    display: block;
+  }
+  .features__tabs .tabsMobile li {
+    height: 55px;
+    padding-top: 17px;
+    text-align: center;
+    border-bottom: 1px solid hsl(229, 8%, 90%);
+    cursor: pointer;
+    color: hsl(229, 8%, 40%);
+  }
+  .features__tabs .tabsMobile li:first-child {
+    border-top: 1px solid hsl(229, 8%, 90%);
+  }
+  .features__tabs .tabsMobile li a {
+    display: inline-block;
+    position: relative;
+  }
+  .features__tabs .tabsMobile li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 85%;
+    bottom: -18px;
+    height: 4px;
+    left: 10px;
+    background: hsl(0, 94%, 66%);
+    transition: transform 0.2s ease-in-out;
+    transform: scale(0);
+  }
+  .features__tabs .tabsMobile .active a::after {
+    transform: scale(1);
+  }
+  .features__blueDiv {
+    height: 200px;
+    width: 70%;
+    top: 450px;
+  }
+  .features__slides {
+    height: auto;
+  }
+  .features__slides .slidesLine .slide {
+    display: block;
+    padding: 0 32px;
+    height: auto;
+  }
+  .features__slides .slidesLine .slide__left {
+    height: 240px;
+    width: 200px;
+    margin-right: 0;
+  }
+  .features__slides .slidesLine .slide__left img {
+    width: 80vw;
+  }
+  .features__slides .slidesLine .slide__right {
+    text-align: center;
+  }
+  .features__slides .slidesLine .slide__right h3 {
+    font-size: 25px;
+  }
+  .features__slides .slidesLine .slide__right button {
+    display: none;
+  }
+  .features__slides .slidesLine .slide2 .slide__left {
+    padding-left: 0px;
+  }
+  .features__slides .slidesLine .slide3 .slide__left {
+    padding-left: 0;
+  }
+  .downloadExtension {
+    margin-top: 100px;
+  }
+  .downloadExtension h2 {
+    margin-bottom: 15px;
+  }
+  .downloadExtension .paragraph {
+    width: 100%;
+    padding: 0 32px;
+  }
+  .downloadExtension .browsersBox {
+    display: block;
+    width: 100%;
+  }
+  .downloadExtension .browsersBox__card {
+    margin: 0 auto;
+  }
+  .FAQ {
+    padding: 0 32px;
+  }
+  .FAQ h2 {
+    max-width: 300px;
+  }
+  .FAQ .paragraph {
+    width: 100%;
+  }
+  .FAQ .accordeon {
+    width: 100%;
+  }
+  .stayUpToDate {
+    padding: 70px 32px;
+  }
+  .stayUpToDate h2 {
+    width: 100%;
+  }
+  .stayUpToDate form {
+    display: block;
+    width: 100%;
+  }
+  .stayUpToDate form .inputContainer {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .stayUpToDate form button {
+    width: 100%;
+  }
+  footer {
+    display: block;
+    height: auto;
+    padding: 40px 32px;
+  }
+  footer .footerLeft {
+    display: block;
+  }
+  footer .footerLeft svg {
+    display: block;
+    margin: 0 auto 35px;
+  }
+  footer .footerLeft a {
+    display: block;
+    margin: 0 auto 25px;
+    text-align: center;
+    font-size: 15px;
+  }
+  footer .footerRight a {
+    margin: 20px 20px 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

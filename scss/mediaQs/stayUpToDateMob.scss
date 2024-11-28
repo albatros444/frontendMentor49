@@ -1,0 +1,17 @@
+.stayUpToDate {
+  padding: 70px 32px;
+  h2 {
+    width: 100%;
+  }
+  form {
+    display: block;
+    width: 100%;
+    .inputContainer {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    button {
+      width: 100%;
+    }
+  }
+}

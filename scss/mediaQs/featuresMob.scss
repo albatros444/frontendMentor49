@@ -1,0 +1,95 @@
+.features {
+  &__text {
+    width: 100%;
+    margin: 0 auto 35px;
+    padding: 0 32px;
+  }
+
+  &__tabs {
+    width: 100%;
+    border-bottom: none;
+    padding: 0 32px;
+
+    .tabsBox {
+      display: none;
+    }
+    .tabsMobile {
+      display: block;
+      li {
+        height: 55px;
+        padding-top: 17px;
+        text-align: center;
+        border-bottom: 1px solid hsl(229, 8%, 90%);
+        cursor: pointer;
+        color: hsl(229, 8%, 40%); //custom
+        &:first-child {
+          border-top: 1px solid hsl(229, 8%, 90%);
+        }
+        a {
+          display: inline-block;
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 85%;
+            bottom: -18px;
+            height: 4px;
+            left: 10px;
+            background: hsl(0, 94%, 66%);
+            transition: transform 0.2s ease-in-out;
+            transform: scale(0);
+          }
+        }
+      }
+      .active {
+        a::after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &__blueDiv {
+    height: 200px;
+    width: 70%;
+    top: 450px;
+  }
+  &__slides {
+    height: auto;
+    .slidesLine {
+      .slide {
+        display: block;
+        padding: 0 32px;
+        height: auto;
+        &__left {
+          height: 240px;
+          width: 200px;
+          margin-right: 0;
+          img {
+            width: 80vw;
+          }
+        }
+        &__right {
+          text-align: center;
+          h3 {
+            font-size: 25px;
+          }
+          button {
+            display: none;
+          }
+        }
+      }
+      .slide2 {
+        .slide__left {
+          padding-left: 0px;
+        }
+      }
+      .slide3 {
+        .slide__left {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
