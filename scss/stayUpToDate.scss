@@ -1,18 +1,19 @@
 .stayUpToDate {
-  padding-top: 60px;
-  padding-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 75px;
   background-color: hsl(231, 69%, 60%);
   color: white;
   .text {
-    margin-bottom: 35px;
+    margin-bottom: 37px;
     text-align: center;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 5px;
   }
   h2 {
-    width: 410px;
-    margin: 0 auto 30px;
+    width: 430px;
+    margin: 0 auto 36px;
+    line-height: 1.25;
     color: white;
   }
   form {
@@ -29,11 +30,13 @@
       border-radius: 5px;
       background-color: hsl(0, 94%, 66%);
       input {
-        height: 46px;
+        height: 48px;
         width: 100%;
         padding-left: 20px;
         border-radius: 5px;
         font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.01em;
         border: 2px solid white;
         &::placeholder {
           color: hsl(229, 8%, 80%);
@@ -52,19 +55,22 @@
         margin-left: 10px;
         font-size: 10px;
         font-weight: 500;
+        letter-spacing: 0.01em;
         font-style: italic;
       }
     }
     button {
       display: block;
       width: 125px;
-      height: 46px;
+      height: 48px;
       padding: 0;
       margin: 0 auto;
       outline: inherit;
       border-radius: 6px;
       cursor: pointer;
-      font-size: 15px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
       font-family: inherit;
       text-align: center;
       text-decoration: none;
