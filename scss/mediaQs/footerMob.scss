@@ -1,23 +1,23 @@
 footer {
   display: block;
   height: auto;
-  padding: 40px 32px;
+  padding: 40px 32px 35px;
   .footerLeft {
     display: block;
     svg {
       display: block;
-      margin: 0 auto 35px;
+      margin: 0 auto 40px;
     }
     a {
       display: block;
-      margin: 0 auto 25px;
+      margin: 0 auto 30px;
       text-align: center;
       font-size: 15px;
     }
   }
   .footerRight {
     a {
-      margin: 20px 20px 0; //40 between images
+      margin: 7px 20px 0; //40 between images
     }
   }
 }

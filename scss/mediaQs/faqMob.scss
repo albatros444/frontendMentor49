@@ -1,12 +1,33 @@
 .FAQ {
   padding: 0 32px;
+  margin-bottom: 120px;
   h2 {
     max-width: 300px;
+    margin-bottom: 20px;
   }
   .paragraph {
     width: 100%;
+    margin-bottom: 40px;
   }
   .accordeon {
     width: 100%;
+    margin-bottom: 50px;
+    &__button {
+      font-size: 15px;
+      svg {
+        margin-right: 0;
+      }
+    }
+    &__panel {
+      p {
+        margin-top: 12px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.9;
+      }
+      .panelActive {
+        max-height: 400px;
+      }
+    }
   }
 }

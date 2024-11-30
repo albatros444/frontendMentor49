@@ -1,7 +1,11 @@
 .features {
+  h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
   &__text {
     width: 100%;
-    margin: 0 auto 35px;
+    margin: 0 auto 38px;
     padding: 0 32px;
   }
 
@@ -9,14 +13,16 @@
     width: 100%;
     border-bottom: none;
     padding: 0 32px;
+    margin-bottom: 74px;
 
     .tabsBox {
       display: none;
     }
     .tabsMobile {
       display: block;
+      // height: 57px;
       li {
-        height: 55px;
+        height: 57px;
         padding-top: 17px;
         text-align: center;
         border-bottom: 1px solid hsl(229, 8%, 90%);
@@ -44,6 +50,7 @@
         }
       }
       .active {
+        color: hsl(229, 31%, 21%);
         a::after {
           transform: scale(1);
         }
@@ -52,8 +59,8 @@
   }
   &__blueDiv {
     height: 200px;
-    width: 70%;
-    top: 450px;
+    width: 75%;
+    top: 460px;
   }
   &__slides {
     height: auto;
@@ -67,13 +74,15 @@
           width: 200px;
           margin-right: 0;
           img {
-            width: 80vw;
+            width: 83vw;
           }
         }
         &__right {
           text-align: center;
+          margin-top: 40px;
           h3 {
-            font-size: 25px;
+            font-size: 24px;
+            margin-bottom: 15px;
           }
           button {
             display: none;

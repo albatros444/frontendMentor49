@@ -2,17 +2,19 @@
   flex-direction: column-reverse;
   align-items: end;
   //   height: 200px;
-  padding: 0 0 160px;
+  padding: 0 0 150px;
   &__right {
     // height: 400px;
-    padding-top: 0;
+    padding-top: 0px;
     &__blueDiv {
-      margin-top: 100px;
-      height: 210px;
+      margin-top: 90px;
+      height: 200px;
+      margin-left: 75px;
     }
     img {
-      left: 15px;
-      width: 92%;
+      left: 13px;
+      bottom: 8px;
+      width: 94%;
     }
   }
   &__left {
@@ -21,7 +23,9 @@
     padding: 0 32px;
     text-align: center;
     h1 {
+      margin: 50px 0 18px;
       font-size: 30px;
+      line-height: 1.3;
     }
     p {
       font-size: 15px;

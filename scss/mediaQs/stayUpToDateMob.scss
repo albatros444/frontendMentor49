@@ -1,17 +1,25 @@
 .stayUpToDate {
-  padding: 70px 32px;
+  padding: 70px 32px 60px;
+  .text {
+    margin-bottom: 13px;
+    font-size: 12px;
+  }
   h2 {
     width: 100%;
+    margin-bottom: 30px;
   }
   form {
     display: block;
     width: 100%;
     .inputContainer {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
     button {
       width: 100%;
     }
+  }
+  &:has(.formInvalid) {
+    padding-bottom: 37px;
   }
 }
